@@ -1,0 +1,5 @@
+/__pycache__
+/Lib/__pycache__/*.pyc
+/Testscripts/__pycache__/*.pyc
+/WebDrivers/__pycache__/*.pyc
+/Externals/Sikuli/sikuli-setup.jar

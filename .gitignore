@@ -3,3 +3,4 @@
 /Testscripts/__pycache__/*.pyc
 /WebDrivers/__pycache__/*.pyc
 /Externals/Sikuli/sikuli-setup.jar
+/Log/*.log

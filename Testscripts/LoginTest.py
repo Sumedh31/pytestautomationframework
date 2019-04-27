@@ -19,6 +19,9 @@ class LoginTest(unittest.TestCase):
      
     def test_1(self):
         self.CommonFunction.LoadUrl()
+        self.Driver.find_element(By.XPATH, self.LocatorsDict['FrontEndUsernameTextBox']).send_keys("guest1")
+        self.Driver.find_element(By.XPATH, self.LocatorsDict['FrontEndPasswordTextBox']).send_keys("guest1")
+        self.Driver.find_element(By.XPATH, self.LocatorsDict['FrontEndLoginButton']).click()
         self.Driver.get_screenshot_as_file("D:\GIT STuff\Test\cap.png")
         action=ActionBuilder(self.Driver)
         cookies=self.Driver.get_cookies()        

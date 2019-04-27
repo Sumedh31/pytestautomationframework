@@ -30,8 +30,6 @@ class BaseFunctionality():
         self.Driver.get(self.CONFIG.APPDETAILS.URL)
         self.Driver.maximize_window()
         
-        self.Driver.maximize_window()
-        
         
     
         

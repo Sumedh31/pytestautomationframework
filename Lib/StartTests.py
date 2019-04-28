@@ -7,6 +7,8 @@ import unittest
 import sys
 from Lib import Utils
 from Lib import TestSuite
+from Lib import HTMLReporting
+from _datetime import datetime
 
 
 
@@ -29,4 +31,16 @@ if __name__=='__main__':
         exec(Import_Statement)
         print("PyTestSuit.addTest("+ClassName+"('"+TestCaseName+"'))")
         eval("PyTestSuit.addTest("+ClassName+"('"+TestCaseName+"'))")
+    
+    timestamp=datetime.now().strftime('%d-%m-%y_%H-%M-%S')
+    ReportDirectory='TestReports\Report'+timestamp+'.html'
+    Reportfile=open(PythonWorkingDirectory+ReportDirectory,"wb")
+    
+    Runner=HTMLReporting.HTMLTestRunner(
+            stream=Reportfile,
+            title='Todays TestReport',
+            description='TEst Desc'
+            )
+    Runner.run(PyTestSuit)
+    
     

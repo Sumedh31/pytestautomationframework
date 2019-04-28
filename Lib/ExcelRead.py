@@ -63,7 +63,10 @@ class ExcelRead():
                     listu.append(self.Sheet.cell_value(rowx=rowval,colx=column_index))
                 return listu
             else:
-                return ('There are more than one column with name ' + ColName)         
+                return ('There are more than one column with name ' + ColName)  
+    def Read_Row_Data(self,RowNo):
+            # Read the specified row data in the List            
+            return self.Sheet.row_values(RowNo)       
                  
             
             
